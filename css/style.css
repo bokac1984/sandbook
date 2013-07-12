@@ -11,6 +11,13 @@ dark purple:		#715458
 html, button, input, select, textarea {
  color: #60686b; /* Default Text Color */
  color: #715458;
+ color: #CA3308;
+ 
+ /**** sa teksture *******/
+ /*** (tamni pikseli) ***/
+ /*color: #4e2d0e;*/
+ color: #371605;
+ /*color: #43270f;*/
 }
 body {
  font-size: 1em; line-height: 1.4;
@@ -63,7 +70,7 @@ body {
    ========================================================================== */
 
 h1, h2, h3, h4, h5, h6, strong{
-	font-weight: bold; color: #2d2d2d; color: #715458;
+	font-weight: bold; color: #2d2d2d; color: #715458; color: #371605;
 }
 h1{ font-size: 48px;}
 h2{ font-size: 32px; }
@@ -171,6 +178,15 @@ ol ol li:last-child {margin-bottom:0;}
 	background-color: #f35000;
 	color: #fff;
 }
+.sand{
+	background-color: #715458;
+}
+.sand:hover{
+	background-color: #FC9F06;
+	/*background-color: #CA3308;
+	background-color: #bb844e;*/
+	color: #fff;
+}
 input{
 	background-color: #fff;
 	border: 1px solid #e2e4e9;
@@ -178,9 +194,16 @@ input{
 	border-radius: 3px;
 	padding: 14px 10px;
 	color: #b6bcbf;
+	color: #bb844e;
 }
+/* jebeni placeholder, ne radi u Operi*/
+::-webkit-input-placeholder { /* WebKit browsers */ color:    #bb844e; }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */   color:    #bb844e; }
+::-moz-placeholder { /* Mozilla Firefox 19+ */		color:    #bb844e; }
+:-ms-input-placeholder { /* Internet Explorer 10+ */color:    #bb844e; }
+
 input.btn{
-	padding: 14px 30px;
+	padding: 15px 30px;
 	border: none;
 	margin-top: 5px;
 	width: 30%;
@@ -301,12 +324,18 @@ header.wrapper{
 	font-size: 20px;
 	color: #60686b;
 	color: #715458;
+	color: #371605;
 }
 .softLink{
 	margin-top: -5px;
 }
 .softLink a, .softtext{
 	color: #b6bcbf;
+	/* sa teksture */
+	/* svjetliji */
+	color: #bb844e;
+	/*color: #dbb27c;*/
+	
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -320,14 +349,15 @@ header.wrapper{
 }
 .book1, .book2{
 	float: right;
-	margin-top: 30px;
+	margin-top: 0px;
 	max-width: 934px;
+	max-width: 650px;
 }
 .book1 img, .book2 img{
 	width: 100%;
 }
 .book2{
-	display: none;
+	/*display: none;*/
 }
 
 
@@ -416,7 +446,9 @@ header.wrapper{
 
 .footer-container {
     color: #4f575a;
+	color: #bb844e;;
     background-color: #20252c;
+	background-color: #371605;
     height: 50px;
     padding-top: 30px;
     text-align: center;

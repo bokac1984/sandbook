@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 // Smooth Scroll	
- $('ul.nav a').smoothScroll();
+ /*$('ul.nav a').smoothScroll();
  
  $('.logo a').click(function(event) {
    event.preventDefault();
@@ -16,17 +16,17 @@ $(document).ready(function() {
      scrollTarget: link.hash
    });
  });
-
+*/
 
 // Fancy Box
-$(".fancybox").fancybox();
+//$(".fancybox").fancybox();
 
 
 // Mosaic Fade
-$('.circle').mosaic({
+/*$('.circle').mosaic({
 	opacity		:	0.8			//Opacity for overlay (0-1)
 });
-
+*/
  			
 });
 
