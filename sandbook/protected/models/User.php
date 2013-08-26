@@ -111,13 +111,39 @@ class User extends CActiveRecord
 		));
 	}
     
-    public function validatePassword($password)
-    {
-        return CPasswordHelper::verifyPassword($password,$this->password);
-    }
- 
-    public function hashPassword($password)
-    {
-        return CPasswordHelper::hashPassword($password);
-    }
+	public function validatePassword($password)
+	{
+		return $this->password === $this->getHash($password);
+	}
+
+
+        /**
+         * we use Sha256 for hasing
+         * @return String HASH
+         */
+        public function getHash($password = null){
+            if($password == null) {
+                $password = $this->password;
+            }
+            return hash('SHA256',$password);
+        }
+
+        /**
+         * resutl random string that has 8 characters
+         * @return String salt
+         */
+        public function generateSalt(){
+            return substr(time() . uniqid(),0,8);
+        }
+        
+        public function beforeSave(){
+            if(parent::beforeSave()){
+                if($this->getIsNewRecord()){
+                    $this->password = $this->getHash( $this->password );
+                }else{
+
+                }
+                return true;
+            }
+        }
 }
