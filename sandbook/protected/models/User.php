@@ -19,6 +19,9 @@
  */
 class User extends CActiveRecord
 {
+    
+    public $salt = 'sandbookyiibestappever';
+    
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -125,7 +128,7 @@ class User extends CActiveRecord
             if($password == null) {
                 $password = $this->password;
             }
-            return hash('SHA256',$password);
+            return hash('SHA256',$password . $this->salt);
         }
 
         /**
